@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="author" content="Vladyslav Liubashenko" />
         <title>Excursion</title>
+        <link rel="stylesheet" href="./style.css">
         <style>
             .container {
                 max-width: 1440px;
@@ -16,26 +17,26 @@
             }
         </style>
     </head>
-    <body bgcolor="#FFFBD6" link="#FFFBD6" vlink="#FFFBD6">
+    <body link="#FFFBD6" vlink="#FFFBD6">
         <header style="background-color: black">
             <div class="container">
-                <h1>
-                    <center><a href="./index.html">Екскурсії.</a></center>
+                <h1 id="h1">
+                    <a href="./index.html">Екскурсії.</a>
                 </h1>
-                <a href="#footer">Пропустити текст</a>
+                <a class="link" href="#footer">Пропустити текст</a>
             </div>
         </header>
         <main>
             <section>
                 <div class="container">
-                    <h1><center>Санта-Марія-делла-Салуте</center></h1>
+                    <h2>>Санта-Марія-делла-Салуте</h2>
                     <iframe
                         class="frame"
                         width="1000px"
                         height="600px"
                         src="https://www.360cities.net/image/santa-maria-della-salute-venezia"
                     ></iframe>
-                    <p>
+                    <p style="color:brown;">
                         Overview and HistoryDo you know why you never like to
                         get out of the bathtub? It's because you wish you were
                         in Venice, that's why.Take one hundred and eighteen
@@ -259,28 +260,25 @@
         </main>
         <footer id="footer" style="background-color: black; height: 100px">
             <div class="container">
-                <center>
-                    <font color="#FFFBD6">
-                        <p>
-                            <a href="./sign-in.html">Увійти в аккаукт</a> або
-                            <a href="./bookings.html"
-                                >перегляньте свої заплановані екскурсії</a
-                            >
-                        </p>
-                        <p>
-                            <a href="./index.html#santa-maria"
-                                >На головну до екскурсії</a
-                            >
-                        </p>
-                        <p>
-                            <a
-                                target="_blank"
-                                href="https://www.360cities.net/image/santa-maria-della-salute-venezia"
-                                >Використаний ресурс</a
-                            >
-                        </p>
-                    </font>
-                </center>
+                    <p>
+                        <a href="./sign-in.html">Увійти в аккаукт</a> або
+                        <a href="./bookings.html"
+                            >перегляньте свої заплановані екскурсії</a
+                        >
+                    </p>
+                    <p>
+                        <a href="./index.html#santa-maria"
+                            >На головну до екскурсії</a
+                        >
+                    </p>
+                    <p>
+                        <a  
+                            class="link"
+                            target="_blank"
+                            href="https://www.360cities.net/image/santa-maria-della-salute-venezia"
+                            >Використаний ресурс</a
+                        >
+                    </p>
             </div>
         </footer>
     </body>

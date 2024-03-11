@@ -11,33 +11,36 @@
             href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
             rel="stylesheet"
         />
+        <link rel="stylesheet" href="./style.css">
         <style>
             .container {
                 max-width: 1440px;
                 margin: 0 auto;
             }
+            .link {
+                font-size: 40px;
+                line-height: 60;
+            }
         </style>
     </head>
-    <body bgcolor="#FFFBD6" link="#FFFBD6" vlink="#FFFBD6">
+    <body link="#FFFBD6" vlink="#FFFBD6">
         <header>
-            <h1><center>Екскурсії</center></h1>
+            <h1 id="h1">Екскурсії</h1>
         </header>
         <main>
             <section style="background-color: black">
                 <div class="container">
-                    <font face="Pacifico" color="#FFFBD6" size="4">
-                        <h3>Міста:</h3>
-                        <ol type="I">
-                            <li>Рим</li>
-                            <li>Венеція</li>
-                            <li>Відень</li>
-                        </ol>
-                        <h3>Місця:</h3>
-                        <ul type="square">
-                            <li>Пам'ятки культури</li>
-                            <li>Природні краєвиди</li>
-                        </ul>
-                    </font>
+                    <h3 >Міста:</h3>
+                    <ol >
+                        <li>Рим</li>
+                        <li>Венеція</li>
+                        <li>Відень</li>
+                    </ol>
+                    <h3 >Місця:</h3>
+                    <ul >
+                        <li>Пам'ятки культури</li>
+                        <li>Природні краєвиди</li>
+                    </ul>
                 </div>
             </section>
             <section>
@@ -50,7 +53,8 @@
                             alt="icon"
                         /><i>Санта-Марія-делла-Салуте</i>
                     </h2>
-                    <a
+                    <a  
+                        class="link"
                         target="_blank"
                         href="https://www.italyguide.info/pics/Basilica-di-Santa-Maria-della-Salute-venezia.jpg"
                     >
@@ -61,42 +65,33 @@
                             alt="photo 1"
                         />
                     </a>
-                    <table
-                        cellspacing="0"
-                        cellpadding="15"
-                        border="1"
-                        width="600"
-                    >
+                    <table class="excursion-table">
                         <caption>
                             Загальна інформація
                         </caption>
                         <colgroup>
-                            <col style="background-color: black" />
+                            <col class="black-background" />
                             <col span="3" />
-                            <col style="background-color: black" />
+                            <col class="black-background" />
                         </colgroup>
                         <tr>
                             <td rowspan="4"></td>
-                            <td align="center" colspan="3">
-                                <b>Базиліка у Венеції</b>
+                            <td class="excursion-title" colspan="3">
+                                Базиліка у Венеції
                             </td>
                             <td rowspan="4"></td>
                         </tr>
                         <tr>
-                            <td align="left">Час: Цілий день</td>
-                            <td align="center">Група: макс. 15 людей</td>
-                            <td align="right">Рівень: легко</td>
+                            <td class="excursion-info" >Час: Цілий день</td>
+                            <td class="excursion-info" >Група: макс. 15 людей</td>
+                            <td class="excursion-info" >Рівень: легко</td>
                         </tr>
                         <tr>
-                            <td colspan="3">Ціна: 700$</td>
+                            <td class="excursion-price" colspan="3">Ціна: 700$</td>
                         </tr>
                         <tr>
-                            <td align="center" bgcolor="#79c6ec" colspan="3">
-                                <font face="Pacifico" size="4" color="#FFFBD6"
-                                    ><a href="./excursion.html"
-                                        >Детальніше про екскурсію</a
-                                    ></font
-                                >
+                            <td class="excursion-link" colspan="3">
+                                <a class="link" href="./excursion.html">Детальніше про екскурсію</a>
                             </td>
                         </tr>
                     </table>
@@ -104,14 +99,10 @@
             </section>
             <footer style="background-color: black; height: 100px">
                 <div class="container">
-                    <center>
-                        <font color="#FFFBD6">
-                            <p>
-                                Сподобалася екскурсія?
-                                <a href="./sign-in.html">Увійти в аккаукт</a>
-                            </p>
-                        </font>
-                    </center>
+                        <p style="color: #FFFBD6; text-align: center;">
+                            Сподобалася екскурсія?
+                            <a class="link" href="./sign-in.html">Увійти в аккаукт</a>
+                        </p>
                 </div>
             </footer>
         </main>
