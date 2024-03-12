@@ -6,7 +6,7 @@ function interactWithUser (){
     }
     return "Ваш вік дійсний"
 } 
-//console.log(interactWithUser())
+console.log(interactWithUser())
 
 // про розробника
 function dispDeveloperInfo (name, surname, position = "студент"){
@@ -19,8 +19,46 @@ function getBiggerStr (str1, str2){
     if (str1.length >= str2.length) alert("Більший рядок - " + str1)
     else alert("Більший рядок - " + str2)
 }
-//getBiggerStr("ппппп", "a")
-//getBiggerStr("A", "aррр")
+getBiggerStr("ппппп", "a")
+getBiggerStr("A", "aррр")
 
+//За допомогою об’єкта document змінити фон сторінки на 30 секунд
 document.body.style.backgroundColor = "red"
 setTimeout (() => {document.body.style.backgroundColor = "#FFFBD6"}, 30000)
+
+document.write("Важлива інформація в кінці, яку ніхто ніколи не читає") // !document.write
+
+const olist = document.getElementById("olist"); // ! getElementById
+
+// За допомогою об’єкта перенаправити браузер на іншу сторінку.
+const btn = document.createElement("button")
+btn.textContent = "Кнопка-посилання на реєстрацію"
+btn.addEventListener("click", (e)=>{
+    e.preventDefault()
+    location.href = "./sign-in.html"
+})
+olist.after(btn) // !after
+
+const textNode = document.createTextNode("Погана текстова нода") //!createTextNode
+olist.append(textNode)
+textNode.nodeValue = "Хороша текстова нода"//!!nodeValue
+
+const city1 = document.createElement("p") //!document.createElement
+olist.append(city1) //!append
+city1.outerHTML = "<li>місто Київ</li>" //!outerHTML
+const city2 = document.createElement("li")
+city2.textContent = "Прага"
+olist.prepend(city2) //!prepend
+
+const cityMos = olist.querySelector("#ru")
+cityMos.remove() //!node.remove
+
+const citiesFrance = olist.querySelector("#fra")
+const newCitiesFrance = document.createElement("ul")
+newCitiesFrance.innerHTML = "<li>місто Париж</li><li>місто Ніцца</li>" //!innerHTML
+citiesFrance.replaceWith(newCitiesFrance) //! node.replaceWith
+
+const listElements = olist.querySelectorAll("li") // ! querySelectorAll
+listElements.forEach((element)=> {
+    element.textContent = "місто " + element.textContent //! textContent
+})
