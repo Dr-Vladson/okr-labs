@@ -1,3 +1,91 @@
+header {
+    height: 160px;
+    background-color: #FFFBD6;
+    position: fixed;
+    top: 0;
+    width: 100%;
+} 
+main {
+    margin-top: 160px;
+}
+.logo {
+    margin: 0 auto;
+    position: relative;
+    width: 42px;
+    height: 42px;
+    background-color: black;
+    border-radius: 50%;
+}
+.logo__int1 {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: brown;
+}
+.logo__int2 {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+}
+.logo span {
+    line-height: 0.5;
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    color: brown;
+}
+.frame {
+    margin: 0 20px 20px 0;
+    float: left;
+}
+.link {
+    font-size: 25px;
+    font-style: oblique;
+    line-height: 2 !important;
+    text-align: center;
+}
+.link:link {
+    color: #FFFBD6;
+}
+.link:visited {
+    color: #FFFBD6;
+}
+.link:hover {
+    color: brown;
+}
+.link:active {
+    color: blue;
+}
+ul, ol {
+    font-family: "Pacifico";
+    color: #FFFBD6;
+}
+ol {
+    list-style-type: lower-roman;
+}
+ul {
+    list-style-type: circle;
+}
+li::after {
+    content: url("./images/free-icon-cathedral-182238.png");
+    background-color: #FFFBD6;
+    margin-left: 10px;
+}
+.excursion-info_time::before {
+    content: url("./images/free-icon-calendar-747310.png");
+    margin-right: 5px;
+}
+.excursion-price span:first-child {
+    color: black;
+}
 .excursion-table a {
     color: white;
     font-family: "Pacifico";
@@ -21,33 +109,12 @@ body {
     max-width: 1440px;
     margin: 0 auto;
 }
-.frame {
-    margin: 0 20px 20px 0;
-    float: left;
-}
 #h1 {
     font-size: 45px;
     color: rgb(0, 0, 0);
     font-style: normal;
     line-height: 1;
     text-align: center;
-}
-.link {
-    font-size: 25px;
-    color: #FFFBD6;
-    font-style: oblique;
-    line-height: 2 !important;
-    text-align: center;
-}
-ul, ol {
-    font-family: "Pacifico";
-    color: #FFFBD6;
-}
-ol {
-    list-style-type: lower-roman;
-}
-ul {
-    list-style-type: circle;
 }
 dl {
     background-color: rgb(121, 198, 236);
@@ -63,7 +130,7 @@ dl dt {
 
 .excursion-table {
     border-collapse: collapse;
-    width: 600px;
+    width: 630px;
 }
 .excursion-table td {
     border: 1px solid black;
