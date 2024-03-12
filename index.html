@@ -124,7 +124,9 @@
         <script>
             alert("Ви зайшли на сайт. Потрібні ваші дані")
             const name = prompt("Введіть своє ім'я")
-            confirm(`Привіт ${name}`)
+            const isConfirmed = confirm(`Привіт ${name}`)
+            if(isConfirmed) console.log("Confirmed")
+            else console.log("not confirmed")
         </script>
         <script src="./script.js"></script>
     </body>
