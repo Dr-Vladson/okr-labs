@@ -1,3 +1,8 @@
+.white-bg {
+    background-color: white;
+    margin-right: 10px;
+    cursor: pointer;
+}
 header {
     height: 160px;
     background-color: #FFFBD6;

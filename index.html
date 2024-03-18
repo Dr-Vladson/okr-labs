@@ -22,7 +22,13 @@
     <body>
         <header>
             <div>
-                <h1 id="h1">Екскурсії <span style="color: brown;">!!!</span></h1>
+                <div style="display: flex;  justify-content: center; gap: 50px;">
+                    <h1 data-menu id="h1">Екскурсії <span style="color: brown;">!!!</span></h1>
+                    <nav id="nav">
+                        <p data-menu data-action="signIn">Увійти</p>
+                        <p data-menu data-action="bookings">До моїх бронювань</p>
+                    </nav>
+                </div>
                 <div class="logo">
                     <div class="logo__int1">
                         <div class="logo__int2">
@@ -35,6 +41,13 @@
         <main>
             <section style="background-color: black">
                 <div class="container">
+                    <div>
+                        <span class="white-bg" onclick="clickHandler1()">Через атрибут</span>
+                        <span class="white-bg" id="btn2">Через Властивість</span>
+                        <span class="white-bg" id="btn3">Два обробника</span>
+                        <span class="white-bg" id="btn4">Об'єкт обробник</span>
+                        <span class="white-bg" id="btn5">Видалити обробники</span>
+                    </div>
                     <h3 >Міста:</h3>
                     <ol id="olist">
                         <li id="ru">Москва</li>
@@ -122,11 +135,11 @@
             </footer>
         </main>
         <script>
-            alert("Ви зайшли на сайт. Потрібні ваші дані")
-            const name = prompt("Введіть своє ім'я")
-            const isConfirmed = confirm(`Привіт ${name}`)
-            if(isConfirmed) console.log("Confirmed")
-            else console.log("not confirmed")
+            //alert("Ви зайшли на сайт. Потрібні ваші дані")
+            //const name = prompt("Введіть своє ім'я")
+            //const isConfirmed = confirm(`Привіт ${name}`)
+            //if(isConfirmed) console.log("Confirmed")
+            //else console.log("not confirmed")
         </script>
         <script src="./script.js"></script>
     </body>
