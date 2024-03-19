@@ -1,3 +1,56 @@
+const olist = document.getElementById("olist")
+olist.addEventListener("mouseover", (e)=> {
+    if (e.target.closest("li")){
+        e.target.style.backgroundColor = "red"
+        if (e.relatedTarget.closest("li")) {
+            e.relatedTarget.style.backgroundColor = "green"
+            setTimeout(()=>{e.relatedTarget.style.backgroundColor = "black"}, 200)
+        }
+    }
+})
+olist.addEventListener("mouseout", (e)=> {
+    if (e.target.closest("li")){
+        e.target.style.backgroundColor = "black"
+    }
+})
+
+
+
+
+const dragItem = document.getElementById("drag")
+let dragItemInitialX;
+let dragItemInitialY;
+dragItem.style.left = "0"
+dragItem.style.top =  "0"
+
+dragItem.addEventListener("mousedown", (e)=> {
+    dragItemInitialX = e.pageX - parseFloat(dragItem.style.left)
+    dragItemInitialY = e.pageY - parseFloat(dragItem.style.top)
+    window.addEventListener("mousemove", mouseMove)
+})
+
+const mouseMove = (e)=> {
+    dragItem.style.zIndex = "101"
+    dragItem.style.left = `${e.pageX - dragItemInitialX}px`
+    dragItem.style.top = `${e.pageY - dragItemInitialY}px`
+}
+
+dragItem.addEventListener("mouseup", ()=> {
+    window.removeEventListener("mousemove", mouseMove)
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
 const clickHandler1 = ()=>{
     alert("This is батон!")
 }
@@ -20,14 +73,6 @@ document.getElementById("btn5").addEventListener("click", () => {
     btn3.removeEventListener("click", clickHandler1)
     btn3.removeEventListener("click", clickHandler2)
     btn4.removeEventListener("click", objHandler)
-})
-
-
-const olist = document.getElementById("olist");
-olist.addEventListener("click", (e)=> {
-    if (e.target.closest("li")){
-        e.target.style.backgroundColor = "gray"
-    }
 })
 
 const actions = {

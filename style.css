@@ -1,3 +1,23 @@
+#basket-img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.drag span {
+    font-size: 16px;
+}
+#drag {
+    position: relative;
+    top:0;
+    left: 0;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background-image: url("./images/drag-drop.png");
+    background-size: 100%;
+}
 .white-bg {
     background-color: white;
     margin-right: 10px;
@@ -9,6 +29,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 100;
 } 
 main {
     margin-top: 160px;
